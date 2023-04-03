@@ -7,7 +7,7 @@
 body {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 18px;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .display {
@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    color: white;
+    color: hsl(0, 0%, 70%);
     border-radius: 0 0 30px 30px;
 }
 
@@ -27,36 +27,38 @@ body {
 }
 
 .score {
-    width: 100px;
-    height: 100px;
+    width: 8rem;
+    aspect-ratio: 1/1;
     background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     border-radius: 50%;
-    position: relative;
+    /* position: relative; */
     margin: 10px;
     padding: 15px;
 }
 
 .scoreNum {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: grid;
+    place-content: center;
 }
 
 .scoreNum h2 {
     font-size: 3rem;
+    color:hsl(0, 0%, 100%);
 }
 
 .scoreNum p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: lightgrey;
 }
 
 .scoreText h2 {
+    font-size: 1.5rem;
     margin: 10px;
+    color: hsl(0, 0%, 100%);
 }
 
 .scoreText p {
+    font-size: 1rem;
     color: lightgrey;
     margin: 10px;
 }
@@ -66,22 +68,26 @@ body {
     flex-direction: column;
     margin: 20px;
     gap: 20px;
+    color: hsl(224, 30%, 27%);
 }
 
 .summary h2 {
     align-self: flex-start;
+    font-size: 1.25rem;
 }
 
 .detail {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
+    font-weight: 700;
 }
 
 .detail:nth-of-type(1) {
     background-color: hsl(0, 100%, 95%);
+    position: relative;
 }
 
 .detail:nth-of-type(2) {
@@ -96,24 +102,48 @@ body {
     background-color: hsl(234, 85%, 95%);
 }
 
-/* .category (1) {
+.category {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.categoryText-1 {
     color: hsl(0, 100%, 67%);
 }
 
-h5:nth-of-type(2) {
+.categoryText-2 {
     color: hsl(39, 100%, 56%);
 }
 
-.detail > .category > h5:nth-of-type(3) {
+.categoryText-3 {
     color: hsl(166, 100%, 37%);
 }
 
-.category:nth-of-type(4) {
+.categoryText-4 {
     color: hsl(234, 85%, 45%);
-} */
+}
 
 .categoryScore span {
-    color: lightgrey;
+    color: rgb(165, 160, 160);
+}
+
+button {
+    background-color: hsl(224, 30%, 27%);
+    transition: background;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid black;
+    color: hsl(0, 0%, 90%);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+button:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    cursor: pointer;
 }
 
 .attribution { 
