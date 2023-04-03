@@ -26,17 +26,13 @@ body {
     padding-bottom: 1rem;
 }
 
-.score {
-    width: 8rem;
+.scoreNum {
+    width: 10rem;
     aspect-ratio: 1/1;
     background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     border-radius: 50%;
-    /* position: relative; */
     margin: 10px;
     padding: 15px;
-}
-
-.scoreNum {
     display: grid;
     place-content: center;
 }
@@ -153,4 +149,29 @@ button:hover {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
+
+@media (min-width: 600px) {
+    body {
+        display: grid;
+        place-items: center;
+    }
+    .container {
+        max-width: 768px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 0.5rem 0.5rem 1rem 0.2rem hsl(0, 0%, 90%);
+        border-radius: 30px;
+    }
+    .display {
+        border-radius: 30px;
+        justify-content: center;
+        padding: 2rem 3rem;
+    }
+    .score {
+        margin: 2rem 0;
+    }
+    .summary {
+        padding: 1rem 0.8rem;
   
+    }
+}
